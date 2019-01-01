@@ -6,6 +6,8 @@ import { Input } from "../../components/Input";
 import { Logo } from "../../components/Logo/index";
 
 export default class Login extends React.Component {
+  static navigationOptions = { header: null };
+
   state = {
     nickname: null
   };
