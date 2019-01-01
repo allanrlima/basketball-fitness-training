@@ -1,21 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import Login from "./src/containers/Login";
+import { Localization } from "expo-localization";
+import i18n from "i18n-js";
+import { pt, en } from "./src/config/localization";
+
+i18n.fallbacks = true;
+i18n.translations = { pt, en };
+i18n.locale = Localization.locale;
 
 export default class App extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
+    return <Login />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
