@@ -15,10 +15,10 @@ const StyledButtonText = styled.Text`
   font-size: 14px;
 `;
 
-export const Button = ({ title = "no title" }) => {
+export const Button = ({ title = "no title", onPress }) => {
   const uppercaseTitle = title.toUpperCase();
   return (
-    <StyledButton>
+    <StyledButton onPress={onPress}>
       <StyledButtonText>{uppercaseTitle}</StyledButtonText>
     </StyledButton>
   );
