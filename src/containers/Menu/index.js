@@ -12,12 +12,20 @@ const ButtonWrapper = styled.View`
 export default class Login extends React.Component {
   static navigationOptions = { header: null };
 
+  navigateToLogin = () => {
+    const { navigation } = this.props;
+    navigation.navigate("Training");
+  };
+
   render() {
     return (
       <Container>
         <Logo />
         <ButtonWrapper>
-          <Button title={i18n.t("menu.addTraining")} />
+          <Button
+            title={i18n.t("menu.addTraining")}
+            onPress={this.navigateToLogin}
+          />
         </ButtonWrapper>
         <ButtonWrapper>
           <Button title={i18n.t("menu.recordWeight")} />
