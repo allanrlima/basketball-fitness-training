@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/native";
+import i18n from "i18n-js";
 import { Container } from "../../components/Container";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
@@ -10,8 +10,11 @@ export default class Login extends React.Component {
     return (
       <Container>
         <Logo />
-        <Input />
-        <Button />
+        <Input
+          label={i18n.t("login.insertYourNickname")}
+          placeholder={i18n.t("login.inputPlaceholder")}
+        />
+        <Button title={i18n.t("login.submit")} />
       </Container>
     );
   }

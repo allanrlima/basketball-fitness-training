@@ -7,7 +7,7 @@ const Wrapper = styled.View`
 `;
 
 const WrapperLabel = styled.View`
-  padding-bottom: 16px;
+  padding-bottom: 4px;
 `;
 
 const Label = styled.Text``;
@@ -22,13 +22,13 @@ const StyledInput = styled.TextInput`
   padding: 8px;
 `;
 
-export const Input = ({ label = "No label", value }) => {
+export const Input = ({ label = "No label", value, placeholder }) => {
   return (
     <Wrapper>
       <WrapperLabel>
         <Label>{label}</Label>
       </WrapperLabel>
-      <StyledInput value={value} maxLength={48} />
+      <StyledInput placeholder={placeholder} value={value} maxLength={48} />
     </Wrapper>
   );
 };
