@@ -22,13 +22,23 @@ const StyledInput = styled.TextInput`
   padding: 8px;
 `;
 
-export const Input = ({ label = "No label", value, placeholder }) => {
+export const Input = ({
+  label = "No label",
+  value,
+  placeholder,
+  onChangeText
+}) => {
   return (
     <Wrapper>
       <WrapperLabel>
         <Label>{label}</Label>
       </WrapperLabel>
-      <StyledInput placeholder={placeholder} value={value} maxLength={48} />
+      <StyledInput
+        onChangeText={onChangeText}
+        placeholder={placeholder}
+        value={value}
+        maxLength={48}
+      />
     </Wrapper>
   );
 };
